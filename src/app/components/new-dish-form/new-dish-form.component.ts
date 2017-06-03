@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Dish} from './../../models/Dish';
+import { Dish } from './../../models/Dish';
 @Component({
   selector: 'app-new-dish-form',
   templateUrl: './new-dish-form.component.html',
@@ -16,18 +16,33 @@ export class NewDishFormComponent implements OnInit {
 
   constructor() { }
 
-
-
   ngOnInit() {
   }
 
   onDone() {
-    this.sendDish.emit(new Dish(this.name, this.price, this.description, this.category));
+
+    var dish = new Dish(this.name, this.price, this.description, this.category);
+    this.sendDish.emit(dish);
     this.name = 'name';
     this.price = 0;
     this.description = 'description';
     this.category = 'category';
   }
 
+  onNameEnter(event) {
+    this.name = event.target.value;
+  }
+
+  onDescriptionEnter(event) {
+    this.description = event.target.value;
+  }
+
+  onPriceEnter(event) {
+    this.price = event.target.value;
+  }
+
+  onCategoryEnter(event) {
+    this.category = event.target.value;
+  }
 
 }

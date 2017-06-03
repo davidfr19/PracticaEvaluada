@@ -1,10 +1,10 @@
 export class Dish {
     private name: string;
-    private price: number;
+    private price: string;
     private description: string;
     private category: string;
 
-    constructor(name: string, price: number, description: string, category: string) {
+    constructor(name: string, price: string, description: string, category: string) {
         this.setName(name);
         this.setPrice(price);
         this.setDescription(description);

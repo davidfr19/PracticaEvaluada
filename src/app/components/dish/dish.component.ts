@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Dish } from '../../models/Dish';
 
 @Component({
   selector: 'app-dish',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DishComponent implements OnInit {
 
-  @Input() dish;
+  @Input() dish;// = new Dish('', '', '', '');
 
   constructor() { }
 

@@ -1,8 +1,5 @@
-
-<h2>{{category.getCategory()}}</h2>
- <div *ngFor = 'let dish of category.dishes'>  
-        <app-dish>{{dish.getName()}}
-            {{dish.getPrice()}}
-            {{dish.getDescription()}}
-        </app-dish>
- </div>
+<h2>
+  {{category.getCategory()}}</h2>
+<div *ngFor='let dish of category.dishes'>
+  <app-dish [dish]='dish'></app-dish>
+</div>
